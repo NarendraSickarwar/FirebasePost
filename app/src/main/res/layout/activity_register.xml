@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/style_color_primary"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/loginGPlus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#000000"
+        android:drawableLeft="@drawable/ic_action_name"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="login with google"
+        android:textColor="#ffffff" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        style="@style/com_facebook_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginGPlus"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="#000000"
+
+        />
+</RelativeLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text="Your Profile"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_imagelay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+
+
+                <ImageView
+                    android:id="@+id/iv_profilepic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_heart_red" />
+
+                <ProgressBar
+                    android:id="@+id/pb_iamge"
+                    style="@android:style/Widget.ProgressBar.Inverse"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_profilepic_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:imeOptions="actionNext"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:drawablePadding="10dp"
+                android:hint="Email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress|textNoSuggestions"
+                android:paddingBottom="10dp"
+                android:paddingEnd="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:paddingStart="5dp"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/et_firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
+                android:hint="Name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:paddingBottom="10dp"
+                android:paddingEnd="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:paddingStart="5dp"
+                android:singleLine="true" />
+
+
+            <TextView
+                android:id="@+id/et_mobilenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:hint="Mobile Number"
+                android:inputType="phone"
+                android:paddingBottom="10dp"
+                android:paddingEnd="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:paddingStart="5dp" />
+
+            <TextView
+                android:id="@+id/et_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+
+                android:paddingEnd="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:paddingStart="5dp"
+                android:paddingTop="10dp"
+                android:text="Logout"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

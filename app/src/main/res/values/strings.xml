@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes">
+    <string name="app_name">Demo AgroStar</string>
+    <plurals name="likes_count">
+        <item quantity="one">%d like</item>
+        <item quantity="other">%d likes</item>
+    </plurals>
+    <string name="diffault_web_client_key">609559635389-r422e35lq3bqacmnq41i0knnb1iqo2kn.apps.googleusercontent.com</string>
+
+    <string name="user_profile_photo">http://igcdn-photos-f-a.akamaihd.net/hphotos-ak-xpa1/t51.2885-19/929118_455075441302693_1605108410_a.jpg</string>
+    <string name="facebook_app_id">119826068684784</string>
+    <string name="fb_login_protocol_scheme">fb[APP_ID]</string>
+</resources>

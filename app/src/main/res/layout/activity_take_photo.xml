@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.home.ui.view.SquaredFrameLayout
+        android:id="@+id/vPhotoRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.commonsware.cwac.camera.CameraView
+            android:id="@+id/cameraView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:drawingCacheQuality="high" />
+
+        <ImageButton
+            android:id="@+id/ivTakenPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/vShutter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:visibility="gone" />
+    </com.home.ui.view.SquaredFrameLayout>
+
+    <com.home.ui.view.RevealBackgroundView
+        android:id="@+id/vRevealBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ViewSwitcher
+            android:id="@+id/vUpperPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/btn_default_light"
+                    android:src="@drawable/ic_close_white_24dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="24dp"
+                    android:background="@drawable/btn_default_light"
+                    android:src="@drawable/ic_grid_on_white_24dp"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="24dp"
+                    android:background="@drawable/btn_default_light"
+                    android:src="@drawable/ic_camera_rear_white_24dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#111111"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/btn_default_light"
+                    android:src="@drawable/ic_arrow_back_white_24dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/btn_default_light"
+                    android:src="@drawable/ic_edit_white_24dp"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/btn_default_light"
+                    android:src="@drawable/ic_edit_white_24dp"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/btn_default_light"
+                    android:src="@drawable/ic_edit_white_24dp"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btnAccept"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/btn_default_light"
+                    android:src="@drawable/ic_arrow_forward_white_24dp" />
+            </LinearLayout>
+
+        </ViewSwitcher>
+
+
+        <ViewSwitcher
+            android:id="@+id/vLowerPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_capture_options"
+                        android:src="@drawable/ic_collections_white_24dp"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btnTakePhoto"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_capture" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_capture_options"
+                        android:src="@drawable/ic_videocam_white_24dp"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvFilters"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </ViewSwitcher>
+
+
+    </RelativeLayout>
+</RelativeLayout>
